@@ -1,0 +1,150 @@
+/* 进度页面样式 */
+/* 文件路径：src/pages/ProgressPage.css */
+
+.progress-page {
+  min-height: 100vh;
+  background: var(--color-background);
+  padding-bottom: calc(56px + var(--space-xl));
+}
+
+/* 统计卡片 */
+.stats-card {
+  padding: var(--space-2xl);
+  background: var(--gradient-hero);
+  color: white;
+  text-align: center;
+  margin: var(--space-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.stats-card h3 {
+  font-size: var(--font-h2);
+  font-weight: 600;
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.stats-card p {
+  font-size: var(--font-body);
+  opacity: 0.9;
+}
+
+.progress-text {
+  font-size: var(--font-stat);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* 能力卡片 */
+.ability-card {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  margin: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.ability-card h3 {
+  font-size: var(--font-h3);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.ability-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ability-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.ability-item span:first-child {
+  min-width: 60px;
+  font-size: var(--font-body);
+  color: var(--color-text-secondary);
+}
+
+.ability-item span:last-child {
+  min-width: 40px;
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: right;
+}
+
+.ability-bar {
+  flex: 1;
+  height: 12px;
+  background: var(--color-border-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.ability-bar__fill {
+  height: 100%;
+  background: var(--gradient-progress);
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--easing-decelerate);
+}
+
+/* 历史卡片 */
+.history-card {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  margin: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.history-card h3 {
+  font-size: var(--font-h3);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+}
+
+.history-info h4 {
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2xs);
+}
+
+.history-info p {
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+}
+
+/* 暗色模式 */
+[data-theme="dark"] .progress-page {
+  background: var(--color-dark-background);
+}
+
+[data-theme="dark"] .ability-card,
+[data-theme="dark"] .history-card {
+  background: var(--color-dark-surface);
+}
+
+[data-theme="dark"] .history-item {
+  background: var(--color-dark-background);
+}

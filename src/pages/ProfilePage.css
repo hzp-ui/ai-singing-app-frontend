@@ -1,0 +1,135 @@
+/* 个人中心页面样式 */
+/* 文件路径：src/pages/ProfilePage.css */
+
+.profile-page {
+  min-height: 100vh;
+  background: var(--color-background);
+  padding-bottom: calc(56px + var(--space-xl));
+}
+
+/* 用户信息卡片 */
+.user-card {
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--gradient-hero);
+  color: white;
+  text-align: center;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--space-lg);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.user-name {
+  font-size: var(--font-h1);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.user-level {
+  font-size: var(--font-body);
+  opacity: 0.9;
+}
+
+/* 统计数据网格 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: var(--font-stat);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: var(--font-caption);
+  color: var(--color-text-secondary);
+}
+
+/* 设置卡片 */
+.settings-card,
+.other-settings {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  margin: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.settings-card h3,
+.other-settings h3 {
+  font-size: var(--font-h3);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item span:first-child {
+  font-size: var(--font-body);
+  color: var(--color-text-primary);
+}
+
+.setting-value {
+  font-size: var(--font-body);
+  color: var(--color-text-tertiary);
+}
+
+/* 暗色模式 */
+[data-theme="dark"] .profile-page {
+  background: var(--color-dark-background);
+}
+
+[data-theme="dark"] .stats-grid,
+[data-theme="dark"] .settings-card,
+[data-theme="dark"] .other-settings {
+  background: var(--color-dark-surface);
+}
+
+[data-theme="dark"] .setting-item {
+  border-bottom-color: var(--color-dark-border);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+  
+  .stat-value {
+    font-size: calc(var(--font-stat) * 0.7);
+  }
+}
