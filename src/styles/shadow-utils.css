@@ -1,0 +1,98 @@
+/* 阴影和圆角系统工具类 */
+/* 基于 Design Token 1.0 */
+
+/* ========== 阴影 ========== */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-btn { box-shadow: var(--shadow-btn); }
+.shadow-none { box-shadow: none; }
+
+/* ========== 圆角 ========== */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+.rounded-none { border-radius: 0; }
+
+/* ========== 圆角组合 ========== */
+.rounded-top-sm {
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: var(--radius-sm);
+}
+
+.rounded-top-md {
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+}
+
+.rounded-top-lg {
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+
+.rounded-bottom-sm {
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.rounded-bottom-md {
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+.rounded-bottom-lg {
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+/* ========== 阴影悬停效果 ========== */
+.hover-shadow-sm:hover { box-shadow: var(--shadow-sm); }
+.hover-shadow-md:hover { box-shadow: var(--shadow-md); }
+.hover-shadow-lg:hover { box-shadow: var(--shadow-lg); }
+
+/* ========== 阴影动画 ========== */
+.shadow-transition {
+  transition: box-shadow var(--duration-normal) var(--easing-standard);
+}
+
+/* ========== 卡片阴影预设 ========== */
+.card-shadow {
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--duration-normal) var(--easing-standard);
+}
+
+.card-shadow:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* ========== 按钮阴影预设 ========== */
+.btn-shadow {
+  box-shadow: var(--shadow-btn);
+  transition: box-shadow var(--duration-normal) var(--easing-standard);
+}
+
+.btn-shadow:hover {
+  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.4);
+}
+
+/* ========== 弹窗阴影预设 ========== */
+.modal-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== 下拉菜单阴影预设 ========== */
+.dropdown-shadow {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== 无障碍：减弱阴影 ========== */
+@media (prefers-reduced-transparency: reduce) {
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-btn {
+    box-shadow: none !important;
+  }
+}

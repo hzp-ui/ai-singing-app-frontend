@@ -1,0 +1,176 @@
+/* 响应式断点系统 */
+/* 基于 Design Token 1.0 */
+
+/* ========== 断点定义 ========== */
+/* 手机：< 768px (默认)
+   平板：≥ 768px
+   桌面：≥ 1024px
+   宽屏：≥ 1280px */
+
+/* ========== 移动优先：手机样式（默认） ========== */
+/* 在 base 样式文件中定义 */
+
+/* ========== 平板：≥ 768px ========== */
+@media (min-width: 768px) {
+  /* 容器宽度 */
+  .container {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+  
+  /* 网格布局 */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  /* 字体调整 */
+  .text-hero { font-size: calc(var(--font-hero) * 1.1); }
+  .text-h1 { font-size: calc(var(--font-h1) * 1.1); }
+  
+  /* 间距调整 */
+  .section-margin { margin-bottom: calc(var(--space-xl) * 1.2); }
+}
+
+/* ========== 桌面：≥ 1024px ========== */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  /* 字体调整 */
+  .text-hero { font-size: calc(var(--font-hero) * 1.2); }
+  .text-h1 { font-size: calc(var(--font-h1) * 1.2); }
+  .text-h2 { font-size: calc(var(--font-h2) * 1.1); }
+  
+  /* 间距调整 */
+  .section-margin { margin-bottom: calc(var(--space-xl) * 1.5); }
+}
+
+/* ========== 宽屏：≥ 1280px ========== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* ========== 响应式工具类 ========== */
+/* 显示/隐藏 */
+.hide-mobile {
+  display: none !important;
+}
+
+.show-mobile {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block !important;
+  }
+  
+  .show-mobile {
+    display: none !important;
+  }
+  
+  .hide-tablet {
+    display: none !important;
+  }
+  
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-tablet {
+    display: block !important;
+  }
+  
+  .show-tablet {
+    display: none !important;
+  }
+  
+  .hide-desktop {
+    display: none !important;
+  }
+  
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* ========== 响应式间距 ========== */
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding: var(--space-xl);
+  }
+  
+  .responsive-margin {
+    margin: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-padding {
+    padding: var(--space-2xl);
+  }
+  
+  .responsive-margin {
+    margin: var(--space-2xl);
+  }
+}
+
+/* ========== 响应式字体 ========== */
+@media (min-width: 768px) {
+  .responsive-text {
+    font-size: calc(var(--font-body) * 1.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-text {
+    font-size: calc(var(--font-body) * 1.2);
+  }
+}
+
+/* ========== 打印样式 ========== */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}

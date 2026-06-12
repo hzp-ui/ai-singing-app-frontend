@@ -1,0 +1,68 @@
+/* 主题切换按钮样式 */
+/* 文件路径：src/components/ThemeToggle.css */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-width: 80px;
+  height: 40px;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-caption);
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-primary-lighter);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.theme-toggle__text {
+  font-weight: 500;
+}
+
+/* 暗色模式下的样式 */
+[data-theme="dark"] .theme-toggle {
+  color: var(--color-dark-text-secondary);
+  background: var(--color-dark-surface);
+  border-color: var(--color-dark-border);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  background: var(--color-primary-lighter);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .theme-toggle {
+    min-width: 60px;
+    height: 36px;
+    padding: var(--space-2xs) var(--space-xs);
+  }
+  
+  .theme-toggle__text {
+    display: none; /* 手机上只显示图标 */
+  }
+  
+  .theme-toggle__icon {
+    font-size: 22px;
+  }
+}

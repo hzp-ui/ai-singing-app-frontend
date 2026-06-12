@@ -1,0 +1,100 @@
+/* 字体系统工具类 */
+/* 基于 Design Token 1.0 */
+
+/* ========== 字体大小 ========== */
+.text-hero { font-size: var(--font-hero); }
+.text-h1 { font-size: var(--font-h1); }
+.text-h2 { font-size: var(--font-h2); }
+.text-h3 { font-size: var(--font-h3); }
+.text-body-lg { font-size: var(--font-body-lg); }
+.text-body { font-size: var(--font-body); }
+.text-caption { font-size: var(--font-caption); }
+.text-button { font-size: var(--font-button); }
+.text-tab { font-size: var(--font-tab); }
+.text-feedback { font-size: var(--font-feedback); }
+.text-stat { font-size: var(--font-stat); }
+
+/* ========== 字体粗细 ========== */
+.font-regular { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* ========== 行高 ========== */
+.leading-tight { line-height: 1.2; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed { line-height: 1.75; }
+
+/* ========== 文字颜色 ========== */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-tertiary { color: var(--color-text-tertiary); }
+.text-brand { color: var(--color-primary); }
+.text-success { color: var(--color-success); }
+.text-error { color: var(--color-error); }
+.text-warning { color: var(--color-warning); }
+
+/* ========== 文字对齐 ========== */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* ========== 文字截断 ========== */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== 文字装饰 ========== */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* ========== 字母间距 ========== */
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.025em; }
+
+/* ========== 无障碍：大字体模式 ========== */
+@media (prefers-font-size: large) {
+  :root {
+    --font-hero: 44px;
+    --font-h1: 40px;
+    --font-h2: 32px;
+    --font-h3: 28px;
+    --font-body-lg: 24px;
+    --font-body: 22px;
+    --font-caption: 20px;
+    --font-button: 26px;
+  }
+}
+
+/* ========== 适老化：超大字体模式 ========== */
+.large-text-mode {
+  --font-hero: 48px;
+  --font-h1: 44px;
+  --font-h2: 36px;
+  --font-h3: 32px;
+  --font-body-lg: 28px;
+  --font-body: 24px;
+  --font-caption: 22px;
+  --font-button: 28px;
+  --font-tab: 22px;
+  --font-feedback: 36px;
+  --font-stat: 56px;
+}
