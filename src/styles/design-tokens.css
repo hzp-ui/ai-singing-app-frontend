@@ -1,0 +1,106 @@
+/* AI 唱歌教学 App - Design Token */
+/* 版本：1.0 | 日期：2026-06-12 */
+
+:root {
+  /* ========== 颜色系统 ========== */
+  --color-primary: #FF8C00;
+  --color-primary-light: #FFA940;
+  --color-primary-lighter: #FFF1D6;
+  --color-primary-dark: #E07800;
+  --color-secondary: #FF6B35;
+  --color-background: #FFF8E7;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+  --color-success: #22C55E;
+  --color-success-bg: #F0FFF4;
+  --color-error: #EF4444;
+  --color-error-bg: #FFF5F5;
+  --color-warning: #F59E0B;
+  --color-warning-bg: #FFFBEB;
+  --color-border: #E5E5E5;
+  --color-border-light: #F0F0F0;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* 渐变 */
+  --gradient-hero: linear-gradient(135deg, #FF8C00 0%, #FFA940 50%, #FFF8E7 100%);
+  --gradient-progress: linear-gradient(90deg, #FF8C00 0%, #FF6B35 100%);
+  --gradient-card-warm: linear-gradient(180deg, #FFF1D6 0%, #FFFFFF 100%);
+  
+  /* 暗色模式 */
+  --color-dark-background: #1A1A1A;
+  --color-dark-surface: #2D2D2D;
+  --color-dark-surface-elevated: #3A3A3A;
+  --color-dark-text-primary: #FFF8E7;
+  --color-dark-text-secondary: #B0B0B0;
+  --color-dark-border: #444444;
+  
+  /* ========== 字体系统 ========== */
+  --font-hero: 36px;
+  --font-h1: 32px;
+  --font-h2: 26px;
+  --font-h3: 22px;
+  --font-body-lg: 20px;
+  --font-body: 18px;
+  --font-caption: 16px;
+  --font-button: 22px;
+  --font-tab: 18px;
+  --font-feedback: 28px;
+  --font-stat: 48px;
+  
+  /* ========== 间距系统 ========== */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  
+  /* ========== 圆角系统 ========== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* ========== 阴影系统 ========== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-btn: 0 4px 12px rgba(255, 140, 0, 0.3);
+  
+  /* ========== 动效系统 ========== */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* 暗色模式 */
+[data-theme="dark"] {
+  --color-background: var(--color-dark-background);
+  --color-surface: var(--color-dark-surface);
+  --color-surface-elevated: var(--color-dark-surface-elevated);
+  --color-text-primary: var(--color-dark-text-primary);
+  --color-text-secondary: var(--color-dark-text-secondary);
+  --color-text-tertiary: #777777;
+  --color-border: var(--color-dark-border);
+  --color-border-light: #383838;
+  --color-primary-lighter: #3D2800;
+  --color-success-bg: #0D3320;
+  --color-error-bg: #3D1111;
+}
+
+/* 减弱动画（无障碍） */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
