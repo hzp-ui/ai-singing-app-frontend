@@ -5,10 +5,24 @@ import SongLibraryPage from './pages/SongLibraryPage'
 import TrainingPage from './pages/TrainingPage'
 import ProgressPage from './pages/ProgressPage'
 import ProfilePage from './pages/ProfilePage'
+import Onboarding from './components/Onboarding'
 import BottomNav from './components/BottomNav'
 import './App.css'
 
 function App() {
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    const onboarded = localStorage.getItem('ai-sing-onboarded')
+    return !onboarded
+  })
+
+  const handleOnboardingComplete = () => {
+    setShowOnboarding(false)
+  }
+
+  if (showOnboarding) {
+    return <Onboarding onComplete={handleOnboardingComplete} />
+  }
+
   return (
     <BrowserRouter>
       <div className="App">

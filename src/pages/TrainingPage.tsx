@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavBar, Button, ProgressBar, Toast } from 'antd-mobile';
 import ThemeToggle from '@/components/ThemeToggle';
 import audioService from '@/services/audioService';
+import speechService from '@/services/speechService';
 import './TrainingPage.css';
 
 const TrainingPage: React.FC = () => {
@@ -18,6 +19,7 @@ const TrainingPage: React.FC = () => {
       await audioService.startRecording();
       setIsRecording(true);
       Toast.show('开始录音...');
+      speechService.speak('开始录音，请跟着唱');
 
       // 模拟进度
       let p = 0;
@@ -46,6 +48,7 @@ const TrainingPage: React.FC = () => {
     try {
       setIsRecording(false);
       Toast.show('停止录音');
+      speechService.speak('录音完成，正在分析');
 
       if (pitchInterval.current) {
         clearInterval(pitchInterval.current);
@@ -54,6 +57,7 @@ const TrainingPage: React.FC = () => {
       const audioBlob = await audioService.stopRecording();
       console.log('录音完成，文件大小:', audioBlob.size);
       Toast.show('训练完成！');
+      speechService.speak('训练完成！您的表现很棒，继续加油');
     } catch (error) {
       console.error('停止录音失败:', error);
     }
