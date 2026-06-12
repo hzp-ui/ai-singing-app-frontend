@@ -32,6 +32,24 @@
   text-align: center;
 }
 
+/* 实时音高显示 */
+.pitch-display {
+  margin-bottom: var(--space-xl);
+}
+
+.pitch-value {
+  font-size: var(--font-stat);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.pitch-label {
+  font-size: var(--font-caption);
+  color: var(--color-text-secondary);
+}
+
 /* 音高条 */
 .pitch-bar {
   width: 100%;
